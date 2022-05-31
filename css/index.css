@@ -1,0 +1,159 @@
+/*  */
+
+* {
+  margin: 0;
+  padding: 0;
+  height: 75vh;
+  width: 100vw;
+}
+
+body {
+  background-image: url("../images/dr04.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  border: 10px solid rgb(188, 150, 26);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: fixed;
+  filter: drop-shadow(1px 1px 5px gold) drop-shadow(1px 1px 5px greenyellow);
+  top: 105px;
+  left: 539px;
+  z-index: 999;
+}
+
+.vertical-1 {
+  position: absolute;
+  width: 130px;
+  height: 290px;
+  border: 5px solid transparent;
+  border-right: 15px solid rgb(188, 150, 26);
+  border-top: none;
+  border-bottom: 40px solid rgb(188, 150, 26);
+  border-radius: 50%;
+  top: 2%;
+  left: -12%;
+}
+
+.vertical-2 {
+  position: absolute;
+  width: 130px;
+  height: 320px;
+  border-radius: 50%;
+  border-left: 15px solid rgb(188, 150, 26);
+  border-bottom: 60px solid rgb(188, 150, 26);
+  right: 0;
+  top: -12%;
+  transform: rotate(-20deg);
+  animation: infinite;
+}
+
+.horizontal-1 {
+  position: absolute;
+  width: 350px;
+  height: 140px;
+  border-right: 65px solid rgb(188, 150, 26);
+  border-bottom: 15px solid rgb(188, 150, 26);
+  border-radius: 50%;
+  top: -15%;
+  right: 0;
+  transform: rotate(-20deg);
+}
+
+.horizontal-2 {
+  position: absolute;
+  width: 380px;
+  height: 150px;
+  border-radius: 50%;
+  border-right: 65px solid rgb(188, 150, 26);
+  border-top: 15px solid rgb(188, 150, 26);
+  top: 55%;
+  left: -10%;
+  transform: rotate(-10deg);
+}
+
+.vertical,
+.horizontal {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.container:hover .vertical {
+  position: absolute;
+  animation: 6s vertical ease;
+  filter: drop-shadow(1px 1px 5px gold) drop-shadow(1px 1px 5px greenyellow);
+}
+.container:hover .horizontal {
+  position: absolute;
+  animation: 6s horizontal ease;
+  filter: drop-shadow(1px 1px 5px gold) drop-shadow(1px 1px 5px greenyellow);
+}
+
+@keyframes vertical {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes horizontal {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+.wanda {
+  display: flex;
+  height: 70px;
+  width: 70px;
+  justify-content: right;
+  margin-bottom: 9%;
+  animation: wanda 7s;
+  animation-fill-mode: forwards;
+}
+.strange-02 {
+  display: flex;
+  height: 20px;
+  width: 20px;
+  justify-content: left;
+  margin-bottom: 15%;
+  margin-left: 18%;
+  animation: strange-02 7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes wanda {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(40px);
+    opacity: 1;
+  }
+}
+@keyframes strange-02 {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(40px);
+    opacity: 1;
+  }
+}
